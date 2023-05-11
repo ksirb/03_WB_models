@@ -21,7 +21,7 @@ INSERT INTO `mydb`.`cats` (`id`, `cat_name`, `fur_color`) VALUES (DEFAULT, "Maus
 -- Inhalte: MT
 SELECT * FROM mydb.cats;
 
--- Detailtabelle: Verbindung zur MT über Fremdschlüssel
+-- Detailtabelle: Verbindung zur MT über Fremdschlüssel (UNI)
 CREATE TABLE IF NOT EXISTS `mydb`.`servants` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `servant_name` VARCHAR(45) NOT NULL,
@@ -41,9 +41,9 @@ ENGINE = InnoDB;
 DESCRIBE mydb.servants;
 
 -- Inserts: DT (Detailtable)
-INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Peter", 5, 2);
-INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Rene", 2, 1);
-INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Sandro", 3, 3);
+INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Peter", 5, 1);
+INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Rene", 2, 3);
+INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Sandro", 3, 2);
 
 -- Inhalte: DT
 SELECT * FROM mydb.servants;

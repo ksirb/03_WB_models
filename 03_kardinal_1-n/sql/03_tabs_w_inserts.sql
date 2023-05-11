@@ -47,3 +47,6 @@ INSERT INTO `mydb`.`kittens` (`id`, `kitten_name`, `fur_color`, `cats_id`) VALUE
 
 -- DT: Inhalte
 SELECT * FROM mydb.kittens;
+
+
+

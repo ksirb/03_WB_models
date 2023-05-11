@@ -1,3 +1,4 @@
+
 -- MT: cats
 CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
   `id` INT NOT NULL AUTO_INCREMENT,

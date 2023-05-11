@@ -1,28 +1,28 @@
 -- Tabellen, verbunden
 
--- Mastertabelle (MT), unverändert
+-- Mastertabelle (MT):, unverändert
 CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `cat_name` VARCHAR(45) NOT NULL,
   `fur_color` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`ID`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
-
-DESCRIBE mydb.cats;
 
 -- Detailtabelle (DT): Verbindung zur MT über Fremdschlüssel
 CREATE TABLE IF NOT EXISTS `mydb`.`servants` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `servant_name` VARCHAR(45) NOT NULL,
   `yrs_served` INT NOT NULL,
-  `cats_ID` INT NOT NULL,
-  PRIMARY KEY (`ID`),
-  INDEX `fk_servants_cats_idx` (`cats_ID` ASC),
+  `cats_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_servants_cats_idx` (`cats_id` ASC),
   CONSTRAINT `fk_servants_cats`
-    FOREIGN KEY (`cats_ID`)
-    REFERENCES `mydb`.`cats` (`ID`)
+    FOREIGN KEY (`cats_id`)
+    REFERENCES `mydb`.`cats` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-DESCRIBE mydb.servants;
+DESCRIBE mydb.cats;
+DESCRIBe mydb.servants;
+

@@ -42,7 +42,7 @@ DESCRIBE mydb.servants;
 -- Inserts: DT (Detailtable)
 INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Peter", 5, 1);
 INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Rene", 2, 3);
-INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Sandro", 3, 1);
+INSERT INTO `mydb`.`servants` (`id`, `servant_name`, `yrs_served`, `cats_id`) VALUES (DEFAULT, "Sandro", 3, 2);
 
 -- Inhalte: DT
 SELECT * FROM mydb.servants;
